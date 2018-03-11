@@ -30,7 +30,7 @@ name varchar(255),
 email varchar(255)
 )
 
-12. Given the Schema above, write the following four basic CRUD db queries using postgres syntax
+13. Given the Schema above, write the following four basic CRUD db queries using postgres syntax
 
 -Get all users:
 

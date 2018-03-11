@@ -1,28 +1,49 @@
 Answer each question in a written format
 
 1. What does semantic HTML mean?
+Semantic HTML is the use of tags that give a description of of the content. It can be used to give the browser an additional resource on how to organize and display your content to the user. It can also be helpful in accessibility features such as screen readers and audio browsers.
 
 2. What is the box model?
+Each HTML Element  has 3 layers on each side padding, border, then margin.
+Each of these properties can me manipulated to give the element a different style.
+    The margin puts space between the element and others
+    The border surrounds the element
+    Padding is between the element and its border. 
+So by altering the padding you are putting more space between the element and its border
 
 3. What is the difference between IDs and Classes?
+IDs are used as a unique identifier for an element and should be used to target a single element whereas a class can be used to identify many elements. 
 
 4. What does the z-index do?
+It allows you to add an index to elements to ensure proper layering and visibility of those elements. The highest z-index will be the top layer and each element with a lower z-index will be shown layered underneath.
 
 5. Summarize what the keyword 'this' is used for?
+A keyword that allows you to reference the entire object, its properties, and methods
 
 6. What is a callback?
+Functions that have a different function as a parameter.
 
 7. What is a closure?
+A closure is a function returned within a function. One use is to give the inner function access to the parent/outer function's variables.
 
 8. How does prototype work?
+A prototype is on any class in javascript and stores methods that are accessible to any object in its class. This can save resources and memory by not creating duplicate methods.
 
 9. What is MVC?
+MVC is the  Model View Controller structure. Each component has a specific role when it comes to storing, displaying, and distributing the data correctly. 
+The model contains the data.
+The view displays the data
+there is a highway of data between the model and view, and the controller is responsible for getting the data where it needs to be. Either sending current data from the model to the view or sending back new user data from the view to the model the controller is what makes the data move.
 
 10. What is the component lifecycle?
+Each Component has a lifecycle that starts when the component is needed and ends when it is finished with. During its lifecycle there are methods that you can call on to manipulate data during each phase of the components life. These methods are very helpful to ensure the component behaves the way it is intended to. The lifecycle methods are triggered at certain events including mounting, updating, and unmounting.
 
 11. What is REST?
+ REST is the standard for web services and the use of HTTP. This standard includes the CRUD methods GET, PUT, POST, and DELETE
 
 12. Name three ways of getting data from the URL using express
+The three ways are req.body, req.query, and req.params. 
+
 
 create table users (
 id serial,
@@ -30,12 +51,20 @@ name varchar(255),
 email varchar(255)
 )
 
-12. Given the Schema above, write the following four basic CRUD db queries using postgres syntax
+x12. Given the Schema above, write the following four basic CRUD db queries using postgres syntax
 
 -Get all users:
+SELECT * from users;
 
 -Create a new user with the name of 'your name' and an email of 'fake@fake.com':
+INSERT INTO users (name, email) 
+VALUES ( 'Michael J. Hutchison', 'fake@fake.com');
 
 -Update the newly created user's name to 'Bobby Boy':
+UPDATE users 
+set name = 'Bobby Boy'
+where name = 'Michael J. Hutchison';
 
 -Delete the newly updated user:
+DELETE from users 
+where name = 'Bobby Boy';
